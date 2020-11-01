@@ -9,3 +9,7 @@ class Calculator:
         x = float(x)
         y = float(y)
         return   float(y)-float(x)
+    def plus(self, x, y):
+          x=float(x)
+          y=float(y)
+          return float(x) + float(y)

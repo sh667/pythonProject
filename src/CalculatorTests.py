@@ -28,7 +28,15 @@ class TestCalculator(unittest.TestCase):
          for row in test_data_file_path:
              self.assertEqual(self.calculator.minus(int(row[0]), int(row[1])), int(row[2]))
 
-
+    def test_plus(self):
+        print('')
+        print('******test_plus******')
+        CsvReader.test_data_row_list=[]
+        test_data_file_path=CsvReader('./src/Addition.csv').test_data_row_list
+        print('Addition loaded')
+        print(test_data_file_path)
+        for row in test_data_file_path:
+            self.assertEqual(self.calculator.plus(int(row[0]), int(row[1])), int(row[2]))
 
 
 def build_test_suite():
@@ -36,6 +44,7 @@ def build_test_suite():
     test_suite = unittest.TestSuite()
 
     test_suite.addTest(TestCalculator('test_minus'))
+    test_suite.addTest(TestCalculator('test_plus'))
 
     return test_suite
 def build_text_report():
