@@ -13,3 +13,7 @@ class Calculator:
           x=float(x)
           y=float(y)
           return float(x) + float(y)
+    def multiple(self, x, y):
+        x = float(x)
+        y = float(y)
+        return float(x) * float(y)
