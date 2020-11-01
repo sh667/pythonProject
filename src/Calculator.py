@@ -17,3 +17,7 @@ class Calculator:
         x = float(x)
         y = float(y)
         return float(x) * float(y)
+    def divide(self, x, y):
+        x = float(x)
+        y = float(y)
+        return float(y) / float(x)
