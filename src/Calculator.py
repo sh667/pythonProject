@@ -21,3 +21,6 @@ class Calculator:
         x = float(x)
         y = float(y)
         return float(y) / float(x)
+    def square(self, x):
+        x = float(x)
+        return (float(x**2))

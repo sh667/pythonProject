@@ -55,6 +55,15 @@ class TestCalculator(unittest.TestCase):
          print('Division loaded')
          for row in test_data_file_path:
              self.assertEqual(self.calculator.divide(float(row[0]), float(row[1])), float(row[2]))
+    def test_square(self):
+         print('')
+         print('******test_square******')
+         CsvReader.test_data_row_list = []
+         test_data_file_path = CsvReader('./src/Square.csv').test_data_row_list
+         print(test_data_file_path)
+         print('Sqauer loaded')
+         for row in test_data_file_path:
+             self.assertEqual(self.calculator.square(float(row[0])), float(row[1]))
 
 
 def build_test_suite():
@@ -65,6 +74,7 @@ def build_test_suite():
     test_suite.addTest(TestCalculator('test_plus'))
     test_suite.addTest(TestCalculator('test_multiple'))
     test_suite.addTest(TestCalculator('test_divide'))
+    test_suite.addTest(TestCalculator('test_square'))
 
     return test_suite
 def build_text_report():
