@@ -5,7 +5,8 @@ from CsvReader import CsvReader
 class TestCalculator(unittest.TestCase):
 
     calculator = None
-
+    def test_instantiate_calculator(self):
+        self.assertIsInstance(self.calculator,Calculator)
     def setUp(self):
         self.calculator = Calculator()
         print('')
@@ -18,6 +19,8 @@ class TestCalculator(unittest.TestCase):
         print('')
         print('tearDown')
 
+    def test_instantiate_calculator(self):
+        self.assertIsInstance(self.calculator,Calculator)
 
     def test_minus(self):
          print('')
@@ -78,7 +81,7 @@ class TestCalculator(unittest.TestCase):
 def build_test_suite():
 
     test_suite = unittest.TestSuite()
-
+    test_suite.addTest(TestCalculator('test_instantiate_calculator'))
     test_suite.addTest(TestCalculator('test_minus'))
     test_suite.addTest(TestCalculator('test_plus'))
     test_suite.addTest(TestCalculator('test_multiple'))
