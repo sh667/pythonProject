@@ -24,3 +24,6 @@ class Calculator:
     def square(self, x):
         x = float(x)
         return (float(x**2))
+    def squareroot(self, x):
+        x = float(x)
+        return float(sqrt(x))
