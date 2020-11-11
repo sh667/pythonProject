@@ -57,7 +57,7 @@ class TestCalculator(unittest.TestCase):
          print(test_data_file_path)
          print('Division loaded')
          for row in test_data_file_path:
-             self.assertEqual(self.calculator.divide(float(row[0]), float(row[1])), float(row[2]))
+             self.assertEqual(round(self.calculator.divide(float(row[0]), float(row[1])),1), round(float(row[2]),1))
     def test_square(self):
          print('')
          print('******test_square******')
@@ -75,7 +75,7 @@ class TestCalculator(unittest.TestCase):
          print(test_data_file_path)
          print('Sqauerroot loaded')
          for row in test_data_file_path:
-             self.assertEqual(self.calculator.squareroot(float(row[0])), float(row[1]))
+             self.assertEqual(round(self.calculator.squareroot(float(row[0])),1), round(float(row[1]),1))
 
 
 def build_test_suite():
